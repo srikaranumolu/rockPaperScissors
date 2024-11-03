@@ -1,1 +1,1 @@
-Landing Page Project
+Rock Paper Scissors Project
