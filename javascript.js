@@ -13,7 +13,11 @@ function getComputerChoice() {
 
 }
 function getHumanChoice() {
-    return prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
+    let choice = prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
+    while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors') {
+        choice = prompt("Invalid choice. Please enter rock, paper, or scissors.").toLowerCase();
+    }
+    return choice;
 }
 
 /* let nums = [];
