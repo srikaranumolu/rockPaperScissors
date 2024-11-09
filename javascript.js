@@ -31,18 +31,18 @@ function playGame() {
     let humanScore = 0;
     let computerScore = 0;
     let results = {'rock': 0, 'paper': 1, 'scissors': 2};
-
+    const result = document.querySelector('#result');
     function playRound(humanChoice, computerChoice) {
         const c = results[computerChoice];
         const h = results[humanChoice];
         const diff = (c - h + 3) % 3;
         if (diff === 0) {
-            console.log(`You tied! You both played ${humanChoice}`);
+            result.textContent = `You tied! You both played ${humanChoice}`;
         } else if (diff === 1) {
-            console.log(`You won! ${capitalize(humanChoice)} beats ${computerChoice}.`);
+            result.textContent = `You won! ${capitalize(humanChoice)} beats ${computerChoice}.`;
             humanScore++;
         } else if (diff === 2) {
-            console.log(`You lose! ${capitalize(computerChoice)} beats ${humanChoice}.`);
+            result.textContent = `You lost! ${capitalize(computerChoice)} beats ${humanChoice}.`;
             computerScore++;
         }
     }
