@@ -1,23 +1,20 @@
 function capitalize(word) {
     return word[0].toUpperCase() + word.slice(1);
 }
+
 function getComputerChoice() {
     const num = Math.floor(Math.random() * 3);
-    if (num === 0) {
-        return 'rock';
-    } else if (num === 1) {
-        return 'scissors';
-    } else {
-        return 'paper';
-    }
-
+    return num === 0 ? 'rock' : num === 1 ? 'scissors' : 'paper';
 }
-function getHumanChoice() {
-    let choice = prompt("Enter your choice: rock, paper, or scissors").toLowerCase();
-    while (choice !== 'rock' && choice !== 'paper' && choice !== 'scissors') {
-        choice = prompt("Invalid choice. Please enter rock, paper, or scissors.").toLowerCase();
-    }
-    return choice;
+
+function getHumanChoice(callback) {
+    const rockButton = document.querySelector('#Rock');
+    const paperButton = document.querySelector('#Paper');
+    const scissorsButton = document.querySelector('#Scissors');
+    let choice = ''
+    rockButton.addEventListener('click', () => callback('rock'));
+    paperButton.addEventListener('click', () => callback('paper'));
+    scissorsButton.addEventListener('click', () => callback('scissors'));
 }
 
 /* let nums = [];
@@ -49,13 +46,18 @@ function playGame() {
             computerScore++;
         }
     }
-    for (let i = 0; i < 5; i++) {
+    /*for (let i = 0; i < 5; i++) {
         playRound(getHumanChoice(), getComputerChoice());
-    }
-    if (humanScore > computerScore) {
+    }*/
+    getHumanChoice((choice) => {
+        playRound(choice, getComputerChoice())
+
+    });
+
+    /*if (humanScore > computerScore) {
         console.log(`You won the game! ${humanScore} to ${computerScore}.`);
     } else {
         console.log(`You lost the game! ${humanScore} to ${computerScore}.`);
-    }
+    }*/
 }
 playGame();
