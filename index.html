@@ -1,20 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-
+    <title>Rock Paper Scissors</title>
 </head>
 <body>
-
-<button id="Rock">Rock</button>
-<button id="Paper">Paper</button>
-<button id="Scissors">Scissors</button>
-<div id="result"></div>
-<div id="score"></div>
-<div id="winner"></div>
+    <div class="container">
+        <div class="buttons">
+            <button id="Rock"><img src="images/rock.png" alt="Rock"></button>
+            <button id="Paper"><img src="images/paper.png" alt="Paper"></button>
+            <button id="Scissors"><img src="images/scissors.png" alt="Scissors"></button>
+        </div>
+        <div id="round"></div>
+        <div id="result"></div>
+        <div id="score"></div>
+        <div id="winner"></div>
+    </div>
+    <script src="javascript.js"></script>
 </body>
-<script src="javascript.js"></script> <!-- Script goes here -->
-
 </html>

@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #1d2d49;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 30px;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+}
+
+button img {
+    width: 300px;
+    height: 300px;
+}
+
+#result, #score, #winner, #round {
+    font-size: 30px;
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 575;
+}
