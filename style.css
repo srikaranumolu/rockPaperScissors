@@ -28,6 +28,7 @@ button {
     cursor: pointer;
     outline: none;
     user-select: none;
+    object-fit: contain;
 }
 
 button img {
@@ -63,4 +64,14 @@ header {
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
     color: white;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    width: 100%;
+    color: black;
 }
