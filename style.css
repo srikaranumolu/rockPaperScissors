@@ -6,6 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background: #1d2d49;
+    user-select: none;
 }
 
 .container {
@@ -20,22 +21,14 @@ body {
     margin-bottom: 20px;
 }
 
-.buttons {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: auto;
-    position: relative;
-}
-
 
 button {
     background: none;
     border: none;
     padding: 0;
-    margin: 30px;
-    width: 300px;
-    height: 300px;
+    margin: 10px;
+    width: 30vw;
+    height: 30vh;
     cursor: pointer;
     outline: none;
     user-select: none;
@@ -43,13 +36,11 @@ button {
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
 
-
 button img {
-    width: 300px;
-    height: 300px;
+    width: 30vw;
+    height: 30vh;
     object-fit: contain;
 }
 
@@ -60,6 +51,7 @@ button img {
     color: white;
     font-family: 'Poppins', sans-serif;
     font-weight: 460;
+    user-select: none;
 }
 
 .bold-score {
@@ -80,6 +72,7 @@ header {
     top: -15px;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
+    user-select: none;
     color: white;
 }
 
@@ -89,6 +82,7 @@ footer {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-align: center;
+    user-select: none;
     width: 100%;
     color: black;
 }
