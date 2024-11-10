@@ -101,7 +101,8 @@ footer {
     }
 
     header {
-        font-size: 2rem;  /* Adjust header size */
+        font-size: 1.5rem;  /* Adjust header size */
+        text-align: center;
     }
 
     footer {
