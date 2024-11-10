@@ -40,6 +40,27 @@ button img {
     margin-top: 10px;
     text-align: center;
     color: white;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 575;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 460;
+}
+
+.bold-score {
+    font-size: larger;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.emoji {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+header {
+    position: fixed;
+    top: -15px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: white;
 }

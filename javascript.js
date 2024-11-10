@@ -75,7 +75,7 @@ function playGame() {
             result.appendChild(document.createTextNode('.'));
         }
         //Update the score text to show the new scores
-        score.textContent = `You: ${humanScore} | Computer: ${computerScore}`;
+        score.innerHTML = `🫵: <strong class="bold-score">${humanScore} &nbsp;&nbsp;</strong> 💻: <strong class="bold-score">${computerScore}</strong>`;
         //Add 1 to the rounds
         rounds++;
         //Check if the game has ended
@@ -98,11 +98,11 @@ function playGame() {
         if (rounds >= 5) {
             //Check who won the game and say message depending on winner
             if (humanScore > computerScore) {
-                winner.textContent = `You won the game! ${humanScore} to ${computerScore}.`;
+                winner.innerHTML = `You won! <strong class="bold-score">${humanScore}</strong> to <strong class="bold-score">${computerScore}</strong>.`;
             } else if (humanScore < computerScore) {
-                winner.textContent = `You lost the game! ${humanScore} to ${computerScore}.`;
+                winner.innerHTML = `You lost! <strong class="bold-score">${humanScore}</strong> to <strong class="bold-score">${computerScore}</strong>.`;
             } else {
-                winner.textContent = `It's a tie! ${humanScore} to ${computerScore}.`;
+                winner.innerHTML = `It's a tie! <strong class="bold-score">${humanScore}</strong> to <strong class="bold-score">${computerScore}</strong>.`;
             }
             //Reset scores and rounds at end of game
             humanScore = 0;
