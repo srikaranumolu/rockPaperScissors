@@ -42,6 +42,8 @@ function playGame() {
         const diff = (c - h + 3) % 3;
         //Make a variable to check if the round was a tie
         let tied = false;
+        //Make a variable to check if the human lost
+        let lose = false
         //Make a variable that stores the results of the round so that you can choose which message to display
         let outcome = '';
         //Check who the winner of the round is and update the scores and rounds
@@ -54,6 +56,7 @@ function playGame() {
             humanScore++;
         } else if (diff === 1) {
             outcome = ` You lost! `;
+            lose = true;
             computerScore++;
         }
         //Check if the round was a tie and display the correct message
@@ -62,6 +65,17 @@ function playGame() {
             result.appendChild(document.createTextNode(outcome));
             //Add on the image after the text
             result.appendChild(humanImg);
+        } else if(lose){ {
+            //Make a piece of text saying the result
+            result.appendChild(document.createTextNode(outcome));
+            //Add the human image
+            result.appendChild(computerImg);
+            //Add the text beats
+            result.appendChild(document.createTextNode(' beats '));
+            //Add the computer image
+            result.appendChild(humanImg);
+            //Add a period at the end
+            result.appendChild(document.createTextNode('.'));
         } else {
             //Make a piece of text saying the result
             result.appendChild(document.createTextNode(outcome));
@@ -73,6 +87,7 @@ function playGame() {
             result.appendChild(computerImg);
             //Add a period at the end
             result.appendChild(document.createTextNode('.'));
+        }
         }
         //Update the score text to show the new scores
         score.innerHTML = `🫵: <strong class="bold-score">${humanScore} &nbsp;&nbsp;</strong> 💻: <strong class="bold-score">${computerScore}</strong>`;

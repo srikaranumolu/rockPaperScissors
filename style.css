@@ -27,8 +27,8 @@ button {
     border: none;
     padding: 0;
     margin: 10px;
-    width: 30vw;
-    height: 30vh;
+    width: 20%;
+    height: auto;
     cursor: pointer;
     outline: none;
     user-select: none;
@@ -39,13 +39,13 @@ button {
 }
 
 button img {
-    width: 30vw;
-    height: 30vh;
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
 #result, #score, #winner, #round {
-    font-size: 30px;
+    font-size: 1.5rem;
     margin-top: 10px;
     text-align: center;
     color: white;
@@ -71,7 +71,7 @@ header {
     position: fixed;
     top: -15px;
     font-family: 'Poppins', sans-serif;
-    font-size: 40px;
+    font-size: 2.5rem;
     user-select: none;
     color: white;
 }
@@ -80,9 +80,31 @@ footer {
     position: fixed;
     bottom: 0;
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     text-align: center;
     user-select: none;
     width: 100%;
     color: black;
+}
+
+@media (max-width: 768px) {
+    button {
+        width: 80%;  /* Make buttons a bit smaller on phones */
+    }
+
+    button img {
+        width: 80%;  /* Image will now fit within the smaller button */
+    }
+
+    #result, #score, #winner, #round {
+        font-size: 1.2rem;  /* Scale down text size */
+    }
+
+    header {
+        font-size: 2rem;  /* Adjust header size */
+    }
+
+    footer {
+        font-size: 0.8rem;  /* Smaller text for footer */
+    }
 }
